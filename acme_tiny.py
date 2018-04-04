@@ -183,7 +183,7 @@ def main(argv=None):
     parser.add_argument("--csr", required=True, help="path to your certificate signing request")
     parser.add_argument("--acme-dir", required=True, help="path to the .well-known/acme-challenge/ directory")
     parser.add_argument("--quiet", action="store_const", const=logging.ERROR, help="suppress output except for errors")
-    parser.add_argument("--disable-check", default=False, action="store_true", help="disable checking if the challenge file is hosted correctly before telling the CA")
+    parser.add_argument("--disable-check", default=True, action="store_true", help="disable checking if the challenge file is hosted correctly before telling the CA")
     parser.add_argument("--directory-url", default=DEFAULT_DIRECTORY_URL, help="certificate authority directory url, default is Let's Encrypt")
     parser.add_argument("--ca", default=DEFAULT_CA, help="DEPRECATED! USE --directory-url INSTEAD!")
     parser.add_argument("--contact", metavar="CONTACT", default=None, nargs="*", help="Contact details (e.g. mailto:aaa@bbb.com) for your account-key")
